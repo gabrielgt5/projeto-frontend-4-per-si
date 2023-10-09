@@ -30,17 +30,19 @@
     </div>
 
     <div>
-      <label for="unidadeMedida">Seu estoque está em:</label>
+      <label for="unidadeMedida">Unidade de medidada do produto:</label>
       <select
         id="unidadeMedida"
         name="unidadeMedida"
         [(ngModel)]="produto.unidadeMedida"
         required
       >
-        <option value="unidade">UND</option>
+        <option value="unidade">UN</option>
         <option value="quilograma">KG</option>
-        <option value="litros">L</option>
-        <option value="metros">M</option>
+        <option value="litros">LT</option>
+        <option value="metros">MT</option>
+        <option value="gramas">GM</option>
+        <option value="caixa">CX</option>
       </select>
     </div>
   </div>
