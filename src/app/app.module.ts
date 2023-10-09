@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { SwitchComponent } from './switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
     NavMenuComponent,
     NavItemComponent,
     FormRegisterComponent,
+    SwitchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

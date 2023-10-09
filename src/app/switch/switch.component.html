@@ -1,0 +1,14 @@
+<div class="containerSwitch">
+  <div><label for="checkbox">Ativar produto:</label></div>
+
+  <div>
+    <label class="switch">
+      <input
+        type="checkbox"
+        [(ngModel)]="checked"
+        (change)="onSwitchChange()"
+      />
+      <span class="slider round"></span>
+    </label>
+  </div>
+</div>
