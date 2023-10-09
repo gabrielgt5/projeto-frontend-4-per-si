@@ -1,60 +1,123 @@
 <form (ngSubmit)="cadastrarProduto()" #cadastroForm="ngForm">
-  <label for="descricao">Descrição do produto(Nome):</label>
-  <input
-    type="text"
-    id="descricao"
-    name="descricao"
-    [(ngModel)]="produto.descricao"
-    placeholder="Digite o nome do seu  produto"
-  />
+  <div>
+    <label for="descricao">Descrição do produto(Nome):*</label>
+    <input
+      type="text"
+      id="descricao"
+      name="descricao"
+      [(ngModel)]="produto.descricao"
+      placeholder="Digite o nome do seu produto"
+      required
+    />
+    <span
+      *ngIf="
+        cadastroForm.controls['descricao'].touched &&
+        cadastroForm.controls['descricao'].hasError('required')
+      "
+      class="error-message"
+    >
+      Nome do produto é obrigatório.
+    </span>
+  </div>
 
-  <label for="valor">Valor do produto:</label>
+  <label for="valor">Valor do produto:*</label>
   <input
     type="number"
     id="valor"
     name="valor"
     [(ngModel)]="produto.valor"
-    placeholder="Digite uma valor numérico do seu produto"
+    placeholder="Digite um valor numérico para o seu produto"
+    required
   />
+  <span
+    *ngIf="
+      cadastroForm.controls['valor'].touched &&
+      cadastroForm.controls['valor'].hasError('required')
+    "
+    class="error-message"
+  >
+    Valor do produto é obrigatório.
+  </span>
 
   <div class="optionproduto">
     <div>
-      <label for="quantidade">Quantidade de estoque do produto:</label>
+      <label for="quantidade">Quantidade de estoque do produto:*</label>
       <input
         type="number"
         id="quantidade"
         name="quantidade"
         [(ngModel)]="produto.quantidade"
         placeholder="Ex:1000"
+        required
       />
+      <span
+        *ngIf="
+          cadastroForm.controls['quantidade'].touched &&
+          cadastroForm.controls['quantidade'].hasError('required')
+        "
+        class="error-message"
+      >
+        Quantidade é obrigatória.
+      </span>
     </div>
 
     <div>
+<<<<<<< HEAD
       <label for="unidadeMedida">Unidade de medidada do produto:</label>
+=======
+      <label for="unidadeMedida">Seu estoque está em:*</label>
+>>>>>>> 7091b8caadb16109bc4a76a98bce766cec20c1ba
       <select
         id="unidadeMedida"
         name="unidadeMedida"
         [(ngModel)]="produto.unidadeMedida"
         required
       >
+<<<<<<< HEAD
         <option value="unidade">UN</option>
+=======
+        <option value="" disabled selected>
+          Selecione a unidade de medida
+        </option>
+        <option value="unidade">UND</option>
+>>>>>>> 7091b8caadb16109bc4a76a98bce766cec20c1ba
         <option value="quilograma">KG</option>
         <option value="litros">LT</option>
         <option value="metros">MT</option>
         <option value="gramas">GM</option>
         <option value="caixa">CX</option>
       </select>
+      <span
+        *ngIf="
+          cadastroForm.controls['unidadeMedida'].touched &&
+          cadastroForm.controls['unidadeMedida'].hasError('required')
+        "
+        class="error-message"
+      >
+        Selecione a unidade de medida.
+      </span>
     </div>
   </div>
 
-  <label for="fornecedor">Fornecedor do produto:</label>
+  <label for="fornecedor">Fornecedor do produto:*</label>
   <input
-    type="fornecedor"
+    type="text"
     id="fornecedor"
-    name="descricao"
-    [(ngModel)]="produto.descricao"
-    placeholder="Digite uma valor numérico do seu produto"
+    name="fornecedor"
+    [(ngModel)]="produto.fornecedor"
+    placeholder="Digite o fornecedor do seu produto"
+    required
   />
+  <span
+    *ngIf="
+      cadastroForm.controls['fornecedor'].touched &&
+      cadastroForm.controls['fornecedor'].hasError('required')
+    "
+    class="error-message"
+  >
+    Fornecedor é obrigatório.
+  </span>
+
   <app-switch></app-switch>
 
   <div><button type="submit">Cadastrar</button></div>
