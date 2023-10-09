@@ -1,0 +1,58 @@
+<form (ngSubmit)="cadastrarProduto()" #cadastroForm="ngForm">
+  <label for="descricao">Descrição do produto(Nome):</label>
+  <input
+    type="text"
+    id="descricao"
+    name="descricao"
+    [(ngModel)]="produto.descricao"
+    placeholder="Digite o nome do seu  produto"
+  />
+
+  <label for="valor">Valor do produto:</label>
+  <input
+    type="number"
+    id="valor"
+    name="valor"
+    [(ngModel)]="produto.valor"
+    placeholder="Digite uma valor numérico do seu produto"
+  />
+
+  <div class="optionproduto">
+    <div>
+      <label for="quantidade">Quantidade de estoque do produto:</label>
+      <input
+        type="number"
+        id="quantidade"
+        name="quantidade"
+        [(ngModel)]="produto.quantidade"
+        placeholder="Ex:1000"
+      />
+    </div>
+
+    <div>
+      <label for="unidadeMedida">Seu estoque está em:</label>
+      <select
+        id="unidadeMedida"
+        name="unidadeMedida"
+        [(ngModel)]="produto.unidadeMedida"
+        required
+      >
+        <option value="unidade">UND</option>
+        <option value="quilograma">KG</option>
+        <option value="litros">L</option>
+        <option value="metros">M</option>
+      </select>
+    </div>
+  </div>
+
+  <label for="fornecedor">Fornecedor do produto:</label>
+  <input
+    type="fornecedor"
+    id="fornecedor"
+    name="descricao"
+    [(ngModel)]="produto.descricao"
+    placeholder="Digite uma valor numérico do seu produto"
+  />
+
+  <div><button type="submit">Cadastrar</button></div>
+</form>
