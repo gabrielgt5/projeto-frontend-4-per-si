@@ -4,15 +4,18 @@
     src="../../../assets/logo.svg"
     alt="logo gd solutions"
   />
+
   <app-nav-item
     [descricao]="'Add produto'"
     [caminhoImagem]="'../../../assets/add-plus.svg'"
     [corTexto]="'#b910a3'"
+    (click)="navigateTo('cadastre-seu-produto')"
   ></app-nav-item>
 
   <app-nav-item
     [descricao]="'Home'"
-    [caminhoImagem]="'../../../assets/home.svg'"
+    [caminhoImagem]="'../../../assets/table-properties.svg'"
     [corTexto]="'#b9b9b9'"
+    (click)="navigateTo('meus-produtos')"
   ></app-nav-item>
 </div>

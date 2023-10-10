@@ -1,9 +1,3 @@
-.containerSwitch {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2rem;
-}
 .switch {
   position: relative;
   display: inline-block;
