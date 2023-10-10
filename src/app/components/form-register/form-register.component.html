@@ -110,5 +110,14 @@
 
   <app-switch></app-switch>
 
-  <div><button type="submit">Cadastrar</button></div>
+  <div>
+    <button
+      type="submit"
+      [ngClass]="{ 'button-disabled': cadastroForm.invalid }"
+      [disabled]="!cadastroForm.valid"
+      class="button-hover"
+    >
+      Cadastrar
+    </button>
+  </div>
 </form>

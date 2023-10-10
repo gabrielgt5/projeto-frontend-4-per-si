@@ -11,6 +11,10 @@ form {
   font-size: 14px;
 }
 
+.button-disabled {
+  background-color: #a8a8a8; /* Ou qualquer cor que desejar para o botão desativado */
+}
+
 label {
   font-weight: 400;
   color: #807676;
@@ -20,7 +24,7 @@ select,
 option {
   width: 100%;
   height: 4rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   margin: 0.75rem 0;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
@@ -51,6 +55,4 @@ button {
 button:hover {
   cursor: pointer;
   color: rgb(240, 240, 240);
-
-  background-color: #910d7f;
 }
