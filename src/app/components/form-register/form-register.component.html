@@ -27,7 +27,7 @@
       id="valor"
       name="valor"
       [(ngModel)]="produto.valor"
-      placeholder="R$7500,99"
+      placeholder="EX:R$7500,99"
       required
     />
     <span
@@ -122,7 +122,7 @@
       Selecione o Fornecedor.
     </span>
   </div>
-<!-- </div>
+  <!-- </div>
   
 
   <label for="fornecedor">Fornecedor do produto:*</label>
@@ -150,8 +150,9 @@
 
   </span> -->
 
-  <app-switch></app-switch>
-
+  <div class="containerSwitch">
+    <label for="checkbox">Ativar produto:</label> <app-switch></app-switch>
+  </div>
 
   <div>
     <button

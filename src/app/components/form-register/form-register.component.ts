@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Produto } from 'src/app/models/produto.model';
 
 @Component({
   selector: 'app-form-register',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-register.component.css'],
 })
 export class FormRegisterComponent {
-  produto: any = {};
-  cadastrarProduto = () => {};
+  produto: Produto = {
+    descricao: '',
+    valor: 0,
+    quantidade: 0,
+    unidadeMedida: 0,
+    fornecedor: '',
+  };
+
+  @Output() produtoCadastrado = new EventEmitter<Produto>();
+
+  cadastrarProduto() {
+    this.produtoCadastrado.emit(this.produto);
+  }
 }

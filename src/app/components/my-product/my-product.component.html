@@ -1,5 +1,11 @@
 <h1>Meus Produtos</h1>
 <hr style="border: 1px solid #b910a3" />
-<div>
-  <app-table-product></app-table-product>
+<div class="container">
+  <app-form-register
+    (produtoCadastrado)="adicionarProduto($event)"
+  ></app-form-register>
+  <hr />
+  <app-table-product
+    [produtosCadastrados]="produtosCadastrados"
+  ></app-table-product>
 </div>
