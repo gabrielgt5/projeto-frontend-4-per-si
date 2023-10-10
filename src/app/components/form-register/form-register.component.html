@@ -6,7 +6,7 @@
       id="descricao"
       name="descricao"
       [(ngModel)]="produto.descricao"
-      placeholder="Digite o nome do seu produto"
+      placeholder="Digite o nome do produto"
       required
     />
     <span
@@ -21,13 +21,13 @@
   </div>
 
   <div>
-    <label for="valor">Valor do produto:*</label>
+    <label for="valor">Preço do produto:*</label>
     <input
       type="number"
       id="valor"
       name="valor"
       [(ngModel)]="produto.valor"
-      placeholder="Digite um valor numérico para o seu produto"
+      placeholder="R$7500,99"
       required
     />
     <span
@@ -37,7 +37,7 @@
       "
       class="error-message"
     >
-      Valor do produto é obrigatório.
+      Preço do produto é obrigatório.
     </span>
   </div>
 
@@ -75,12 +75,12 @@
         <option value="" disabled selected>
           Selecione a unidade de medida
         </option>
-        <option value="unidade">UN</option>
-        <option value="quilograma">KG</option>
-        <option value="litros">LT</option>
-        <option value="metros">MT</option>
-        <option value="gramas">GM</option>
-        <option value="caixa">CX</option>
+        <option value="unidade">Un</option>
+        <option value="quilograma">Kg</option>
+        <option value="litros">Lt</option>
+        <option value="metros">Mt</option>
+        <option value="gramas">Gm</option>
+        <option value="caixa">Cx</option>
       </select>
       <span
         *ngIf="
@@ -93,6 +93,37 @@
       </span>
     </div>
   </div>
+
+  <div>
+    <label for="Fornecedor">Fornecedor do produto:</label>
+
+    <select
+      id="fornecedor"
+      name="fornecedor"
+      [(ngModel)]="produto.fornecedor"
+      required
+    >
+      <option value="" disabled selected>
+        Selecione o Fornecedor do produto
+      </option>
+      <option value="unidade">Americanas</option>
+      <option value="quilograma">Amazon</option>
+      <option value="litros">Aliexpress</option>
+      <option value="metros">Mercado Livre</option>
+      <option value="metros">Apple</option>
+    </select>
+    <span
+      *ngIf="
+        cadastroForm.controls['fornecedor'].touched &&
+        cadastroForm.controls['fornecedor'].hasError('required')
+      "
+      class="error-message"
+    >
+      Selecione o Fornecedor.
+    </span>
+  </div>
+<!-- </div>
+  
 
   <label for="fornecedor">Fornecedor do produto:*</label>
   <input
@@ -111,10 +142,16 @@
     class="error-message"
   >
     Fornecedor é obrigatório.
+
   </span>
   <div class="containerSwitch">
     <label for="checkbox">Ativar produto:</label> <app-switch></app-switch>
   </div>
+
+  </span> -->
+
+  <app-switch></app-switch>
+
 
   <div>
     <button
