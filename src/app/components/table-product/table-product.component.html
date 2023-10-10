@@ -9,11 +9,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>teste</td>
-      <td>teste</td>
-      <td>teste</td>
-      <td>teste</td>
+    <tr *ngFor="let product of tableProduct">
+      <td>{{ product.descricao }}</td>
+      <td>{{ product.valor }}</td>
+      <td>{{ product.quantidade }}</td>
+      <td>{{ product.unidadeMedida }}</td>
+      <td>{{ product.fornecedor }}</td>
+      <td>{{ product.ativo }}</td>
 
       <td><app-switch></app-switch></td>
     </tr>
