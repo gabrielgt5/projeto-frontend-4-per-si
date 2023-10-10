@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-switch',
@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['switch.component.css'],
 })
 export class SwitchComponent {
-  checked: boolean = false;
+  @Input() isActive: boolean = false;
 
   onSwitchChange() {
-    console.log('Switch state:', this.checked);
+    console.log('Estado do interruptor:', this.isActive);
   }
 }

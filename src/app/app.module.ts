@@ -11,7 +11,7 @@ import { MyProductComponent } from './components/my-product/my-product.component
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { ProductRegistrationComponentComponent } from './components/product-registration-component/product-registration-component.component';
 import { TableProductComponent } from './components/table-product/table-product.component';
-import { SwitchComponent } from './switch/switch.component';
+import { SwitchComponent } from './components/switch/switch.component';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 
 @NgModule({

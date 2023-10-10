@@ -5,6 +5,7 @@
       <th>Valor</th>
       <th>Estoque</th>
       <th>Fornecedor</th>
+      <th>UND</th>
       <th>Status</th>
     </tr>
   </thead>
@@ -13,11 +14,14 @@
       <td>{{ product.descricao }}</td>
       <td>{{ product.valor }}</td>
       <td>{{ product.quantidade }}</td>
-      <td>{{ product.unidadeMedida }}</td>
       <td>{{ product.fornecedor }}</td>
-      <td>{{ product.ativo }}</td>
 
-      <td><app-switch></app-switch></td>
+      <td>{{ product.unidadeMedida }}</td>
+      <td>
+        <app-switch [isActive]="product.ativo"></app-switch>
+      </td>
+
+      <td></td>
     </tr>
   </tbody>
 </table>

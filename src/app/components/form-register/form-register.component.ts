@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { IProduct } from 'src/app/models/product..model';
 import { produtos } from 'src/app/shared/products.list';
@@ -16,6 +17,11 @@ export class FormRegisterComponent {
     fornecedor: '',
     ativo: false,
   };
+  constructor(private router: Router) {}
+
+  onSwitchStateChanged(isActive: boolean) {
+    this.produto.ativo = isActive;
+  }
 
   cadastrarProduto(): void {
     this.produto.id = produtos.length + 1;
@@ -30,5 +36,6 @@ export class FormRegisterComponent {
       fornecedor: '',
       ativo: false,
     };
+    this.router.navigate(['meus-produtos']);
   }
 }
