@@ -9,6 +9,9 @@ import { FormRegisterComponent } from './components/form-register/form-register.
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { SwitchComponent } from './switch/switch.component';
+import { TableProductComponent } from './components/table-product/table-product.component';
+import { ProductRegistrationComponentComponent } from './components/product-registration-component/product-registration-component.component';
+import { MyProductComponent } from './components/my-product/my-product.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { SwitchComponent } from './switch/switch.component';
     NavItemComponent,
     FormRegisterComponent,
     SwitchComponent,
+    TableProductComponent,
+    ProductRegistrationComponentComponent,
+    MyProductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
