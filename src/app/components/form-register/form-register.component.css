@@ -7,7 +7,7 @@ form {
   margin-top: 1.25rem;
 }
 .error-message {
-  color: red;
+  color: rgb(255, 124, 84);
   font-size: 14px;
 }
 
